@@ -14,6 +14,7 @@
 <script>
     import PopularMoves from "../components/PopularMoves.svelte";
     export let popular;
+    import global from '../global.css'
     console.log(popular)
 </script>
 
