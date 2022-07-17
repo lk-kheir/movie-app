@@ -11,8 +11,13 @@
     }
 </script>
 <script>
+    import {goto} from "$app/navigation";
+
     export let movieDetail;
     console.log(movieDetail)
+    let gohome = () => {
+        goto('/')
+    };
 </script>
 <div class="movie-detail">
     <div class="img-container">
@@ -27,9 +32,11 @@
         <p>
             <span>released on: {movieDetail.release_date}</span>
             <br>
-            <span>Average rating: {movieDetail.vote_average}</span>
+            <span>Average rating: {movieDetail.vote_average}
         </p>
+
     </div>
+    <button on:click={gohome}>Home</button>
 </div>
 
 <style>
